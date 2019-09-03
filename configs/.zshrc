@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export TERM="xterm-256color"
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
+#
 # Enviroment variables
 export PATH="$PATH:$HOME/.local/bin"
 #export ZSH="$HOME/.oh-my-zsh"
@@ -21,22 +18,6 @@ export LESS_TERMCAP_so=$'\e[1;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-#POWERLEVEL9K_MODE="nerdfont-complete"
-#POWERLEVEL9K_DISABLE_RPROMPT=true
-#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="▶ "
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
