@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 export DL=$HOME/Downloads
 export FONTDIR=$HOME/.local/share/fonts
 
@@ -17,3 +19,5 @@ cd fonts
 curl -fLo "Ubuntu Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete.ttf
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+
+#exec "$@"
