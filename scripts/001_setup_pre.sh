@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
-export DL=$HOME/Downloads
-export FONTDIR=$HOME/.local/share/fonts
-
-export BATV=0.12.1
-export LSDV=0.16.0
+source ./000_env.sh
 
 mkdir -p $FONTDIR
 mkdir -p $DL/fonts
@@ -20,4 +16,3 @@ curl -fLo "Ubuntu Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
 
-#exec "$@"
