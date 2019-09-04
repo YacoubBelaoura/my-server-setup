@@ -1,7 +1,9 @@
+#!/usr/bin/env bash
+
 echo "this script need to be run with sudo"
 
-sudo apt-get install zsh nvim -y
-sudo dpkg -i $DL/lsd_${LSDV}_amd64.deb
-sudo dpkg -i $DL/bat_${BATV}_amd64.deb
+apt install zsh nvim -y
+dpkg -i $DL/lsd_${LSDV}_amd64.deb
+dpkg -i $DL/bat_${BATV}_amd64.deb
 
 chsh -s $(which zsh)
