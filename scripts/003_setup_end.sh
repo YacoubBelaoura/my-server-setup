@@ -19,7 +19,6 @@ rsync -avz $DL/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 rsync -avz $DL/fonts/* $FONTDIR/
 
 # @fixme : fc-cache need to be installed on US_18.04 'fontconfig' pkg
-#fc-cache -vf $FONTDIR/
 fc-cache -vf
 
 echo "#################### install Oh-my-zsh plugins"
@@ -33,7 +32,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions \
 echo "#################### install dot files"
 
 # @fixme : configs dir is with parent folder
-rsync -avz ../configs/.* $HOME
+rsync -Ivz ../configs/.* $HOME
 
 echo "#################### install Oh-my-tmux"
 
