@@ -3,7 +3,7 @@
 #
 # Enviroment variables
 export PATH="$PATH:$HOME/.local/bin"
-#export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 #export LC_ALL=en_US.UTF-8
 #export TERMINAL=alacritty
 export PAGER=less
