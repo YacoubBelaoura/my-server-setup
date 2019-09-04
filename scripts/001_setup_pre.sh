@@ -1,8 +1,8 @@
-export $DL=$HOME/Downloads
-export $FONTDIR=$HOME/.local/share/fonts
+export DL=$HOME/Downloads
+export FONTDIR=$HOME/.local/share/fonts
 
-export $BATV=0.12.1
-export $LSDV=0.16.0
+export BATV=0.12.1
+export LSDV=0.16.0
 
 mkdir -p $FONTDIR
 mkdir -p $DL/fonts
