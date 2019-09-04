@@ -1,4 +1,19 @@
 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "install powerlevel9k"
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+echo "install fonts"
+
+mkdir ~/.config/fontconfig/conf.d/
+mv $DL/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+
+mv $DL/fonts/* $FONTDIR/
+
+#fc-cache -vf $FONTDIR/
+fc-cache -vf
+
 echo "install Oh-my-zsh plugins"
 
 git clone https://github.com/zdharma/fast-syntax-highlighting.git \
@@ -6,6 +21,10 @@ git clone https://github.com/zdharma/fast-syntax-highlighting.git \
 
 git clone https://github.com/zsh-users/zsh-autosuggestions \
   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "install dot files"
+
+cp configs/* $HOME
 
 echo "install Oh-my-tmux"
 
@@ -31,3 +50,5 @@ tmux source $HOME/.tmux.conf
 echo "install SpaceVim"
 
 curl -sLf https://spacevim.org/install.sh | bash
+
+echo "Log out of your session and login again."
