@@ -10,10 +10,13 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 echo "#################### install fonts"
 
-mkdir ~/.config/fontconfig/conf.d/
-mv $DL/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+# @fixme : fix no such file or dir : try with -p flag
+mkdir -p ~/.config/fontconfig/conf.d/
+# mv $DL/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+rsync -avz $DL/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 
-mv $DL/fonts/* $FONTDIR/
+# mv $DL/fonts/* $FONTDIR/
+rsync -avz $DL/fonts/* $FONTDIR/
 
 # @fixme : fc-cache need to be installed on US_18.04 'fontconfig' pkg
 #fc-cache -vf $FONTDIR/
@@ -29,8 +32,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions \
 
 echo "#################### install dot files"
 
-# @fixme : command not working
-cp configs/* $HOME
+# @fixme : configs dir is with parent folder
+rsync -avz ../configs/.* $HOME
 
 echo "#################### install Oh-my-tmux"
 
@@ -55,7 +58,7 @@ tmux source $HOME/.tmux.conf
 
 echo "#################### install SpaceVim"
 
-# @fixme : Spacevim need sudo and interaction
+# @fixme : Spacevim need sudo and interaction and xfonts-utils
 curl -sLf https://spacevim.org/install.sh | bash
 
 echo "Log out of your session and login again."
